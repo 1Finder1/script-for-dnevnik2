@@ -7,7 +7,7 @@
 // @match        https://schools.dnevnik.ru/marks.aspx*tab=period*
 // @icon         https://www.google.com/s2/favicons?domain=dnevnik.ru
 
-// @connect      botvk1.pythonanywhere.com
+// @connect      website8v.pythonanywhere.com
 // @grant        GM_xmlhttpRequest
 
 // @require http://code.jquery.com/jquery-3.4.1.min.js
@@ -18,7 +18,7 @@
 
     // Your code here...
 
-    var URL_POST = 'https://botvk1.pythonanywhere.com/version'
+    var URL_POST = 'https://website8v.pythonanywhere.com/marks/upload'
 
     var REPLACE_SUBJECT = {
         'История России': 'История',
