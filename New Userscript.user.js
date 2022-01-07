@@ -31,6 +31,7 @@
 
     var current_quarter = $('.switch>.active>a').text().match(/\d+/)[0]
     var marks = {}
+    var average = {}
 
     for (var i = 2; i<trs.length; i++)
     {
@@ -57,6 +58,7 @@
         if (average_score < 2.5){mark_class = 'mR'}
 
         marks[current_subject] = mark_list
+        average[current_subject] = average_score
 
         current_tr.append('<th><span class="mark '+mark_class+'">' + average_score + '</span></th>')
     }
@@ -65,7 +67,8 @@
         'login': localStorage.storage,
         'date': new Date().toLocaleDateString(),
         'quarter': current_quarter,
-        'marks': marks
+        'marks': marks,
+        'average': average
     }
     console.log(request)
 
